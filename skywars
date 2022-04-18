@@ -1,0 +1,79 @@
+getgenv().kill = false;
+local plr = game.Players.LocalPlayer
+
+function speed()
+    if plr.Character.Humanoid.WalkSpeed < 35 then
+plr.Character.Humanoid.WalkSpeed = 35 else
+plr.Character.Humanoid.WalkSpeed = 16 
+end
+end
+
+function teleportmi()
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 165, -0.481527)
+end
+
+function teleportv()
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(-0.000694171, 264, -60.2713)
+end
+
+function teleportm()
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(-0.0532532, 264, 61.5931)
+end
+function kill() 
+spawn(function()
+    while getgenv().kill == true do
+for i,v in ipairs(game.Players:GetChildren()) do
+if v:FindFirstChild("Role") then
+plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
+wait(0.0095)
+end
+end
+end
+end)
+end
+
+
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Skywars") -- Creates the window
+
+local b = w:CreateFolder("Main")  -- Creates the folder(U will put here your buttons,etc)
+
+local z = w:CreateFolder("Teleports")
+
+b:Button("Speed",function()
+        speed()
+    end)
+
+b:Toggle("Auto Kill All",function(bool)
+    getgenv().kill = bool
+print("Auto Kill All is: ", bool)
+if bool then
+    kill()  
+end
+end)
+
+
+b:Bind("Bind",Enum.KeyCode.C,function() --Default bind
+    if plr.Character.Humanoid.WalkSpeed > 30 then
+plr.Character.Humanoid.WalkSpeed = 30 
+else
+plr.Character.Humanoid.WalkSpeed = 16
+end
+end)
+
+z:Button("Mega Vip",function()
+    teleportm()
+end)
+
+z:Button("Middle Island",function()
+    teleportmi()
+end)
+
+z:Button("VIP",function()
+    teleportv()
+end)
+
+b:DestroyGui()
+
