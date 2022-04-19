@@ -1,3 +1,47 @@
+local wk = game.Workspace
+
+if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") then
+    game.Workspace.p:Destroy()
+    wk.h:Destroy()
+wk.z:Destroy()
+wk.n:Destroy()
+end
+wait(.00001)
+local p = Instance.new("Part")
+p.Anchored = true
+p.Transparency = 1
+p.Size = Vector3.new(10,1,10)
+p.Position = Vector3.new(115.996, 191.5, -176.155)
+p.Name = "p"
+p.Parent = wk
+
+local h = Instance.new("Part")
+h.Anchored = true
+h.Transparency = 1
+h.Size = Vector3.new(10,1,10)
+h.Position = Vector3.new(177.632, 191.5, 127.542)
+h.Name = "h"
+h.Parent = wk
+
+local z = Instance.new("Part")
+z.Anchored = true
+z.Transparency = 1
+z.Size = Vector3.new(10,1,10)
+z.Position = Vector3.new(-179.019, 191.5, -112.309)
+z.Name = "z"
+z.Parent = wk
+
+local n = Instance.new("Part")
+n.Anchored = true
+n.Transparency = 1
+n.Size = Vector3.new(10,1,10)
+n.Position = Vector3.new(-120.692, 191.5, 194.963)
+n.Parent = wk
+n.Name = "n"
+
+
+
+
 getgenv().kill = false;
 getgenv().w = false;
 local plr = game.Players.LocalPlayer
