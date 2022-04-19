@@ -71,22 +71,14 @@ if bool then
 end
 end)
 
-b:Toggle("Auto Kill All",function(boolz)
-    getgenv().kill = boolz
-print("Auto Kill All is: ", boolz)
+b:Toggle("Auto Kill All",function(bool)
+    getgenv().kill = bool
+print("Auto Kill All is: ", bool)
 if bool then
     kill()  
 end
 end)
 
-
-b:Bind("Bind",Enum.KeyCode.C,function() --Default bind
-    if plr.Character.Humanoid.WalkSpeed > 30 then
-plr.Character.Humanoid.WalkSpeed = 30 
-else
-plr.Character.Humanoid.WalkSpeed = 16
-end
-end)
 
 z:Button("Mega Vip",function()
     teleportm()
