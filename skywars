@@ -69,7 +69,7 @@ b:Button("Speed",function()
 b:Toggle("Auto Win",function(bool)
     getgenv().winz = bool
 print("Auto Win is: ", bool)
-if boolz then
+if bool then
 print("fired")
     winx()  
     else 
