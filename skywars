@@ -68,8 +68,15 @@ b:Toggle("Auto Win",function(bool)
     getgenv().win = bool
 print("Auto Win is: ", bool)
 if bool then
-print("fired")
-    test()
+while getgenv().win == true do
+    po = island1
+    wait(.2)
+    po = island2
+    wait(.2)
+    po = island3 
+    wait(.2)
+    po = island4
+    end
 end
 end)
 
