@@ -68,7 +68,7 @@ b:Toggle("Auto Win",function(bool)
     getgenv().win = bool
 print("Auto Win is: ", bool)
 if bool then
-    print("wowsowynot")
+    test()
 end
 end)
 
