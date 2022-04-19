@@ -1,4 +1,5 @@
 getgenv().kill = false;
+getgenv().win = false;
 local plr = game.Players.LocalPlayer
 
 function speed()
@@ -7,13 +8,28 @@ plr.Character.Humanoid.WalkSpeed = 35 else
 plr.Character.Humanoid.WalkSpeed = 16 
 end
 end
-
+local po = plr.Character.HumanoidRootPart.CFrame
 function teleportmi()
     plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 165, -0.481527)
 end
 
 function teleportv()
     plr.Character.HumanoidRootPart.CFrame = CFrame.new(-0.000694171, 264, -60.2713)
+end
+local island1 = CFrame.new(115.996, 193, -176.155)
+local island2 = CFrame.new(177.632, 193, 127.542)
+local island3 = CFrame.new(-179.019, 193, -112.309)
+local island4 = CFrame.new(-120.692, 193, 194.963)
+function win()
+while getgenv().win == true do 
+    po = island1
+    wait(.2)
+    po = island2
+    wait(.2)
+    po = island3 
+    wait(.2)
+    po = island4
+    end
 end
 
 function teleportm()
@@ -45,6 +61,14 @@ local z = w:CreateFolder("Teleports")
 b:Button("Speed",function()
         speed()
     end)
+    
+b:Toggle("Auto Win",function(bool)
+    getgenv().win = bool
+    print("Auto Win is: ",bool)
+    if bool then
+    win()
+end
+end)
 
 b:Toggle("Auto Kill All",function(bool)
     getgenv().kill = bool
