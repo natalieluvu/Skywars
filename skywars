@@ -70,7 +70,10 @@ b:Toggle("Auto Win",function(boolz)
     getgenv().winz = boolz
 print("Auto Win is: ", boolz)
 if boolz then
+print("fired")
     winx()  
+    else 
+    print("notfired")
 end
 end)
 
