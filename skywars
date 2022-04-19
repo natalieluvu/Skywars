@@ -29,6 +29,10 @@ end
 end)
 end
 
+function test()
+    print("wow2948")
+end
+
 
 function teleportm()
     plr.Character.HumanoidRootPart.CFrame = CFrame.new(-0.0532532, 264, 61.5931)
@@ -65,9 +69,7 @@ b:Toggle("Auto Win",function(bool)
 print("Auto Win is: ", bool)
 if bool then
 print("fired")
-    winx()  
-    else 
-    print("notfired")
+    test()
 end
 end)
 
