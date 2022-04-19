@@ -68,10 +68,10 @@ b:Button("Speed",function()
         speed()
     end)
     
-b:Toggle("Auto Win",function(bool)
-    getgenv().win = bool
-print("Auto Win is: ", bool)
-if bool then
+b:Toggle("Auto Win",function(boolz)
+    getgenv().win = boolz
+print("Auto Win is: ", boolz)
+if boolz then
     print("soadiahdushdad")
 end
 end)
