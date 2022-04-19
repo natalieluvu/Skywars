@@ -1,5 +1,5 @@
 getgenv().kill = false;
-getgenv().win = false;
+getgenv().w = false;
 local plr = game.Players.LocalPlayer
 
 function speed()
@@ -68,19 +68,19 @@ b:Button("Speed",function()
         speed()
     end)
     
-b:Toggle("Auto Win",function(boolz)
-    getgenv().win = boolz
-print("Auto Win is: ", boolz)
-if boolz then
-    print("soadiahdushdad")
-end
-end)
+    b:Toggle("Auto Kill All",function(bool)
+        getgenv().kill = bool
+    print("Auto Kill All is: ", bool);
+    if bool then
+        kill();
+    end
+    end)
 
-b:Toggle("Auto Kill All",function(bool)
-    getgenv().kill = bool
-print("Auto Kill All is: ", bool)
+b:Toggle("Auto Win",function(bool)
+    getgenv().w = bool
+print("Auto Win is: ", bool);
 if bool then
-    kill()
+    autowin();
 end
 end)
 
@@ -97,4 +97,17 @@ z:Button("VIP",function()
     teleportv()
 end)
 
+function autowin()
+    spawn(function()
+        while getgenv().w == true do
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(115.996, 193, -176.155)
+            wait(.2)
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(177.632, 193, 127.542)
+            wait(.2)
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(-179.019, 193, -112.309)
+            wait(.2)
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(-120.692, 193, 194.963)
+        end
+    end)
+end
 b:DestroyGui()
