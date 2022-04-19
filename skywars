@@ -80,7 +80,7 @@ b:Toggle("Auto Kill All",function(bool)
     getgenv().kill = bool
 print("Auto Kill All is: ", bool)
 if bool then
-    print("lslal")
+    kill()
 end
 end)
 
