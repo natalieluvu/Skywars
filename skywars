@@ -30,7 +30,17 @@ end)
 end
 
 function test()
-    print("wow2948")
+    spawn(function()
+    while getgenv().win == true do
+    po = island1
+    wait(.2)
+    po = island2
+    wait(.2)
+    po = island3 
+    wait(.2)
+    po = island4
+    end
+    end)
 end
 
 
