@@ -24,6 +24,7 @@ function winx()
 spawn(function()
 while getgenv().win == true do 
     po = island1
+    print("Through")
     wait(.2)
     po = island2
     wait(.2)
