@@ -20,7 +20,7 @@ local island1 = CFrame.new(115.996, 193, -176.155)
 local island2 = CFrame.new(177.632, 193, 127.542)
 local island3 = CFrame.new(-179.019, 193, -112.309)
 local island4 = CFrame.new(-120.692, 193, 194.963)
-function winx()
+function win()
 spawn(function()
 while getgenv().win == true do 
     po = island1
