@@ -22,6 +22,7 @@ local island3 = CFrame.new(-179.019, 193, -112.309)
 local island4 = CFrame.new(-120.692, 193, 194.963)
 function winx()
 while getgenv().win == true do 
+spawn(function()
     po = island1
     wait(.2)
     po = island2
@@ -70,9 +71,9 @@ if bool then
 end
 end)
 
-b:Toggle("Auto Kill All",function(bool)
-    getgenv().kill = bool
-print("Auto Kill All is: ", bool)
+b:Toggle("Auto Kill All",function(boolz)
+    getgenv().kill = boolz
+print("Auto Kill All is: ", boolz)
 if bool then
     kill()  
 end
