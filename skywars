@@ -24,13 +24,7 @@ local island4 = CFrame.new(-120.692, 193, 194.963)
 function win()
 spawn(function()
 while getgenv().win == true do 
-    po = island1
-    wait(.2)
-    po = island2
-    wait(.2)
-    po = island3 
-    wait(.2)
-    po = island4
+    print("itisfiring")
 end
 end)
 end
