@@ -66,9 +66,9 @@ b:Button("Speed",function()
         speed()
     end)
     
-b:Toggle("Auto Win",function(boolz)
-    getgenv().winz = boolz
-print("Auto Win is: ", boolz)
+b:Toggle("Auto Win",function(bool)
+    getgenv().winz = bool
+print("Auto Win is: ", bool)
 if boolz then
 print("fired")
     winx()  
