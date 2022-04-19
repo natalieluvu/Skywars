@@ -1,5 +1,5 @@
 getgenv().kill = false;
-getgenv().winz = false;
+getgenv().win = false;
 local plr = game.Players.LocalPlayer
 
 function speed()
@@ -23,7 +23,7 @@ local island4 = CFrame.new(-120.692, 193, 194.963)
 
 function win()
 spawn(function()
-while getgenv().winz == true do 
+while getgenv().win == true do 
     po = island1
     wait(.2)
     po = island2
@@ -67,7 +67,7 @@ b:Button("Speed",function()
     end)
     
 b:Toggle("Auto Win",function(bool)
-    getgenv().winz = bool
+    getgenv().win = bool
 print("Auto Win is: ", bool)
 if bool then
 print("fired")
