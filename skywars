@@ -1,10 +1,15 @@
 local wk = game.Workspace
-
-if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") then
+local gi = game:GetService("StarterGui"):WaitForChild("Extra")
+if game:GetService("StarterGui"):WaitForChild("Extra"):FindFirstChild("AntiSploitClient") then
+    gi.AntiSploitClient:Destroy()
+    gi.AntiSploitClient2:Destroy()
+end
+if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") and game.Workspace:FindFirstChild("specz") then
     game.Workspace.p:Destroy()
     wk.h:Destroy()
 wk.z:Destroy()
 wk.n:Destroy()
+wk.specz:Destroy()
 end
 wait(.00001)
 local p = Instance.new("Part")
@@ -39,11 +44,19 @@ n.Position = Vector3.new(-120.692, 191.5, 194.963)
 n.Parent = wk
 n.Name = "n"
 
-
+local specz = Instance.new("Part")
+specz.Parent = game.Workspace
+specz.Anchored = true
+specz.Transparency = 1
+specz.Name = "specz"
+specz.Size = Vector3.new(300,1,300)
+specz.Position = Vector3.new(4.53283, 200, -0.481527)
+specz.Material = "Glass"
 
 
 getgenv().kill = false;
 getgenv().w = false;
+getgenv().farm = false;
 local plr = game.Players.LocalPlayer
 
 function speed()
@@ -54,7 +67,7 @@ end
 end
 local po = plr.Character.HumanoidRootPart.CFrame
 function teleportmi()
-    plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 165, -0.481527)
+    plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 170, -0.481527)
 end
 
 function teleportv()
@@ -82,6 +95,7 @@ function test()
 end
 
 
+
 function teleportm()
     plr.Character.HumanoidRootPart.CFrame = CFrame.new(-0.0532532, 264, 61.5931)
 end
@@ -97,7 +111,11 @@ end
 end
 end)
 end
-
+    function teleportspc()
+        specz.Transparency = 0.9
+        specz.CanCollide = true
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 203, -0.481527)
+    end
 
 
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
@@ -108,9 +126,40 @@ local b = w:CreateFolder("Main")  -- Creates the folder(U will put here your but
 
 local z = w:CreateFolder("Teleports")
 
-b:Button("Speed",function()
-        speed()
+local xy = w:CreateFolder("Extra")
+
+ xy:Toggle("Spectate",function(bool)
+        if bool then
+        teleportspc();
+        else
+            specz.Transparency = 1
+            specz.CanCollide = false
+            plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 170, -0.481527)
+            
+        end
     end)
+
+    local xrp = true
+    xy:Toggle("Speed",function()
+        if xrp == true then
+            xrp = false
+            plr.Character.Humanoid.WalkSpeed = 100
+        else
+            xrp = true
+            plr.Character.Humanoid.WalkSpeed = 16
+        end
+    end)
+    local trp = true
+    xy:Toggle("JumpBoost",function(bool)
+        if trp == true then
+            trp = false
+            plr.Character.Humanoid.JumpPower = 250
+        else
+            trp = true
+            plr.Character.Humanoid.JumpPower = 50
+        end
+    end)
+   
     
     b:Toggle("Auto Kill All",function(bool)
         getgenv().kill = bool
@@ -154,6 +203,7 @@ function autowin()
             plr.Character.HumanoidRootPart.CFrame = CFrame.new(-120.692, 193, 194.963)
             else
                 wait(2)
+            end
         end
     end)
 end
