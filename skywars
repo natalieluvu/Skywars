@@ -115,6 +115,7 @@ plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFra
 wait(0.0095)
 elseif plr:FindFirstChild("Role") and game.Workspace.plrsLeft.Value == 1 then
 plr.Character.HumanoidRootPart.CFrame = CFrame.new(115.996, 193, -176.155)
+wait(1)
 end
 end
 end
