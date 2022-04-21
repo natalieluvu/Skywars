@@ -109,6 +109,10 @@ plr.BackPack:FindFirstChild("Sword").Parent = plr.Character
 plr.Character.Sword:Activate()
 plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
+elseif v:FindFirstChild("Role") and plr.Character:FindFirstChild("Sword") then
+plr.Character.Sword:Activate()
+plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
+wait(0.0095)
 end
 end
 end
