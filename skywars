@@ -104,8 +104,12 @@ spawn(function()
     while getgenv().kill == true do
 for i,v in ipairs(game.Players:GetChildren()) do
 if v:FindFirstChild("Role") then
+if plr.Backpack:FindFirstChild("Sword") then
+plr.BackPack:FindFirstChild("Sword").Parent = plr.Character
+plr.Character.Sword:Activate()
 plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
+end
 end
 end
 end
