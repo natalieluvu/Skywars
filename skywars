@@ -97,12 +97,15 @@ for i,v in ipairs(game.Players:GetChildren()) do
 if v:FindFirstChild("Role") and plr.Backpack:FindFirstChild("Sword") then
 plr.Backpack:FindFirstChild("Sword").Parent = plr.Character
 plr.Character.Sword:Activate()
-plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(CFrame.new(-0.9,-4,2.2)
+plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
 elseif v:FindFirstChild("Role") and plr.Character:FindFirstChild("Sword") then
 plr.Character.Sword:Activate()
-plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(CFrame.new(-0.9,-4,2.2)
+plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
+elseif game.Workspace.plrsLeft.Value == 1 and plr:FindFirstChild("Role") then
+wait()
+getgenv().kill = false
 end
 end
 end
@@ -145,9 +148,13 @@ local xy = w:CreateFolder("Extra")
             plr.Character.Humanoid.JumpPower = 50
         end
     end)
-   
     
-    b:Toggle("Auto Kill All",function(bool)
+    xy:Button("Code Sword",function()
+local zest = "\115\119\111\114\100"
+local Event = game:GetService("ReplicatedStorage").Events.PromoRewards
+Event:FireServer(zest)
+    end)
+   b:Toggle("Auto Kill All",function(bool)
         getgenv().kill = bool
     print("Auto Kill All is: ", bool);
     if bool then
