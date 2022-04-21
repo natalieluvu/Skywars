@@ -1,8 +1,9 @@
 local wk = game.Workspace
 local gi = game:GetService("StarterGui"):WaitForChild("Extra")
-if game:GetService("StarterGui"):WaitForChild("Extra"):FindFirstChild("AntiSploitClient") then
+if game:GetService("StarterGui"):WaitForChild("Extra"):FindFirstChild("AntiSploitClient") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("Local") then
     gi.AntiSploitClient:Destroy()
     gi.AntiSploitClient2:Destroy()
+    game.Players.LocalPlayer.PlayerGui.Local:Destroy()
 end
 if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") and game.Workspace:FindFirstChild("specz") then
     game.Workspace.p:Destroy()
