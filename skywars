@@ -97,11 +97,11 @@ for i,v in ipairs(game.Players:GetChildren()) do
 if v:FindFirstChild("Role") and plr.Backpack:FindFirstChild("Sword") then
 plr.Backpack:FindFirstChild("Sword").Parent = plr.Character
 plr.Character.Sword:Activate()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame - Vector3.new(0, 5.3, 0) + v.Character.HumanoidRootPart.CFrame.lookVector * -4.005
+plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
 elseif v:FindFirstChild("Role") and plr.Character:FindFirstChild("Sword") then
 plr.Character.Sword:Activate()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame - Vector3.new(0, 5.3, 0) + v.Character.HumanoidRootPart.CFrame.lookVector * -4.005
+plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
 end
 end
