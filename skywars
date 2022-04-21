@@ -161,7 +161,30 @@ Event:FireServer(zest)
         kill();
     end
     end)
-
+    
+    xy:Button("Full Mega Set",function()
+        local cu = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(-11.8055592, 269.491241, 61.2423973)
+        wait(1.375)
+        if plr.leaderstats.Wins.Value < 2 then
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.1144924, 269.999908, 61.2462921)
+        wait(1)
+        plr.Character.HumanoidRootPart.CFrame = cu
+        elseif plr.leaderstats.Wins.Value == 2 or plr.leaderstats.Wins.Value == 3 then
+        plr.Character.HumanoidRootPart.CFrmae = CFrame.new(11.35991, 269.999908, 67.2552185)
+        wait(1)
+        plr.Character.HumanoidRootPart.CFrame = cu
+        elseif plr.leaderstats.Wins.Value == 4 or plr.leaderstats.Wins.Value == 5 then
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(11.9427862, 269.999908, 73.1286469)
+        wait(1)
+        plr.Character.HumanoidRootPart.CFrame = cu
+        elseif plr.leaderstats.Wins.Value > 5 then
+        plr.Character.HumanoidRootPart.CFrame = CFrame.new(12.3340025, 269.999908, 79.1730347)
+        wait(1)
+        plr.Character.HumanoidRootPart.CFrame = cu
+    end
+end)
+    
 b:Toggle("Auto Win",function(bool)
     getgenv().w = bool
 print("Auto Win is: ", bool);
