@@ -5,12 +5,11 @@ if game:GetService("StarterGui"):WaitForChild("Extra"):FindFirstChild("AntiSploi
     gi.AntiSploitClient2:Destroy()
     game.Players.LocalPlayer.PlayerGui.Local:Destroy()
 end
-if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") and game.Workspace:FindFirstChild("specz") then
+if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") then
     game.Workspace.p:Destroy()
     wk.h:Destroy()
 wk.z:Destroy()
 wk.n:Destroy()
-wk.specz:Destroy()
 end
 wait(.00001)
 local p = Instance.new("Part")
@@ -45,14 +44,7 @@ n.Position = Vector3.new(-120.692, 191.5, 194.963)
 n.Parent = wk
 n.Name = "n"
 
-local specz = Instance.new("Part")
-specz.Parent = game.Workspace
-specz.Anchored = true
-specz.Transparency = 1
-specz.Name = "specz"
-specz.Size = Vector3.new(300,1,300)
-specz.Position = Vector3.new(4.53283, 200, -0.481527)
-specz.Material = "Glass"
+
 
 
 getgenv().kill = false;
@@ -139,17 +131,6 @@ local b = w:CreateFolder("Main")  -- Creates the folder(U will put here your but
 local z = w:CreateFolder("Teleports")
 
 local xy = w:CreateFolder("Extra")
-
- xy:Toggle("Spectate",function(bool)
-        if bool then
-        teleportspc();
-        else
-            specz.Transparency = 1
-            specz.CanCollide = false
-            plr.Character.HumanoidRootPart.CFrame = CFrame.new(4.53283, 170, -0.481527)
-            
-        end
-    end)
 
     local xrp = true
     xy:Toggle("Speed",function()
