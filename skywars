@@ -104,9 +104,7 @@ plr.Character.Sword:Activate()
 plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
 else
-wait(1)
-print("Not Functional")
-wait(1)
+wait()
 end
 end
 end
