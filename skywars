@@ -1,9 +1,8 @@
 local wk = game.Workspace
 local gi = game:GetService("StarterGui"):WaitForChild("Extra")
-if game:GetService("StarterGui"):WaitForChild("Extra"):FindFirstChild("AntiSploitClient") and game.Players.LocalPlayer.PlayerGui:FindFirstChild("Local") then
+if game:GetService("StarterGui"):WaitForChild("Extra"):FindFirstChild("AntiSploitClient") then
     gi.AntiSploitClient:Destroy()
     gi.AntiSploitClient2:Destroy()
-    game.Players.LocalPlayer.PlayerGui.Local:Destroy()
 end
 if game.Workspace:FindFirstChild("p") and game.Workspace:FindFirstChild("h") then
     game.Workspace.p:Destroy()
@@ -43,7 +42,6 @@ n.Size = Vector3.new(10,1,10)
 n.Position = Vector3.new(-120.692, 191.5, 194.963)
 n.Parent = wk
 n.Name = "n"
-
 
 
 
@@ -106,9 +104,6 @@ elseif v:FindFirstChild("Role") and plr.Character:FindFirstChild("Sword") then
 plr.Character.Sword:Activate()
 plr.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame*CFrame.new(-0.9,-4,2.2)
 wait(0.0095)
-elseif plr:FindFirstChild("Role") and game.Workspace.plrsLeft.Value == 1 then
-plr.Character.HumanoidRootPart.CFrame = CFrame.new(115.996, 193, -176.155)
-wait(1)
 end
 end
 end
